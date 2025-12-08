@@ -9,7 +9,7 @@ function buildStyles() {
         .pipe(sourcemaps.init())
         .pipe(sass({ style: 'compressed' }).on('error', sass.logError))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dist/main.css'));
+        .pipe(gulp.dest('dist/style'));
 };
 
 function buildImage() {
