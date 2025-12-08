@@ -2,7 +2,7 @@
 @use "hero";
 @use "variaveis";
 @use "shows";
-
+@use "plans";
 
 //mixin
 @mixin text($font-size: 16px) {
@@ -50,4 +50,17 @@ body {
     @include text(18px);
     color: variaveis.$CorTextoSecundario;
     text-decoration: underline;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$CorTextoSecundario;
+    background-color: #6421ff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 2vw;
+    margin-bottom: 8px;
 }
