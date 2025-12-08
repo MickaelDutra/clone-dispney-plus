@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/style/main.css">
     <title>Clone Disney+</title>
 </head>
+
 <body>
     <section class="hero">
         <div class="hero__content">
@@ -30,7 +32,7 @@
                     <button>ASSINE AGORA</button>
                     <span class="text">R$ 45,90/mês*</span>
                 </li>
-                 <li class="hero__content__combos__combo">
+                <li class="hero__content__combos__combo">
                     <img src="src/images/logos/disney_star_plus.png" alt="Imagem Combo">
                     <button>ASSINE AGORA</button>
                     <span class="text">R$ 45,90/mês*</span>
@@ -40,7 +42,83 @@
                 *O preço pode variar caso a assinatura seja feita através de outras plataformas.
             </p>
         </div>
-   
     </section>
+    <section class="show">
+        <nav class="show__tabs">
+            <button data-tab-button="em_breve" class="show__tabs__button show__tabs__button--is-active">
+                Em Breve
+            </button>
+            <button data-tab-button="populares" class="show__tabs__button">
+                Mais Populares
+            </button>
+            <button data-tab-button="star_plus" class="show__tabs__button">
+                Mais no Star+
+            </button>
+        </nav>
+        <ul data-tab-id="em_breve" class="show__list show__list--is-active">
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+        </ul>
+        <ul data-tab-id="populares" class="show__list">
+            <li class="show__list__item">
+                <img src="./dist/images/mais_populares/obi_wan.jpg" alt="Obi Wan">
+            </li>
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+        </ul>
+        <ul data-tab-id="star_plus" class="show__list">
+            <li class="show__list__item">
+                <img src="./dist/images/mais_no_star_plus/nba.jpg" alt="NBA">
+            </li>
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+            <li class="show__list__item">
+                <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            </li>
+        </ul>
+        </sectiopn>
+        
+        <!-- JavaScript -->
+        <script src="src/script/main.js"></script>
 </body>
+
 </html>

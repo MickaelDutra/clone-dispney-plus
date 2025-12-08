@@ -1,6 +1,8 @@
 @use "reset";
 @use "hero";
 @use "variaveis";
+@use "shows";
+
 
 //mixin
 @mixin text($font-size: 16px) {
