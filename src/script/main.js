@@ -2,27 +2,31 @@ const buttons = document.querySelectorAll('[data-tab-button]');
 const questions = document.querySelectorAll('[data-faq-question]')
 
 document.addEventListener('DOMContentLoaded', function () {
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', function (button) {
-            const navTarget = button.target.dataset.tabButton;
-            const nav = document.querySelector(`[data-tab-id=${navTarget}]`);
-            hideNav();
-            removeButtonActive();
-            nav.classList.add('show__list--is-active');
-            button.target.classList.add('show__tabs__button--is-active');
-        })
-    }
+    buttons.forEach(button => {
+        button.addEventListener('click', selectShow)
+    })
 
-    for (let i = 0; i < questions.length; i++) {
-        questions[i].addEventListener('click', openOrCloseAnswer)
-    }
+    questions.forEach(question => {
+        question.addEventListener('click', openOrCloseAnswer)
+    })
 })
 
+//funcionalidades da section class="faq"
 function openOrCloseAnswer(element) {
-    const classe = 'faq__questions__item--is-open';
+    const classFaq = 'faq__questions__item--is-open';
     const fatherElement = element.target.parentNode;
+    fatherElement.classList.toggle(classFaq);
+}
+//funcionalidades da section class="faq"
 
-    fatherElement.classList.toggle(classe);
+//funcionalidades da section class="show"
+function selectShow(event) {
+    const navTarget = event.target.dataset.tabButton;
+    const nav = document.querySelector(`[data-tab-id=${navTarget}]`);
+    hideNav();
+    removeButtonActive();
+    nav.classList.add('show__list--is-active');
+    event.target.classList.add('show__tabs__button--is-active');
 }
 
 function removeButtonActive() {
@@ -37,3 +41,4 @@ function hideNav() {
         tabsContainer[i].classList.remove('show__list--is-active');
     }
 }
+//funcionalidades da section class="show"
