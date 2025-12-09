@@ -36,7 +36,10 @@
                 overflow: hidden;
                 height: 0;
                 padding: 0 24px;
-                transition: height, .5s ease;
+                transition: height .5s ease;
+                li{
+                    margin: 12px 24px;
+                }
             }
 
             &--is-open {

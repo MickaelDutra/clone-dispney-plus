@@ -68,3 +68,4 @@ function showHeader() {
     const header = document.querySelector('header');
     header.classList.remove('header--is-hidden');
 }
+//funcionalidades do header class="header"
