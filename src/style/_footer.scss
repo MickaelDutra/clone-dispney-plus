@@ -31,7 +31,7 @@
                 display: block;
 
                 &:hover {
-                    color: variaveis.$CorTextoSecundario;
+                    color: variaveis.$corTextoSecundario;
                 }
             }
         }
@@ -59,7 +59,7 @@
         height: 38px;
 
         &:hover {
-            color: variaveis.$CorTextoSecundario;
+            color: variaveis.$corTextoSecundario;
         }
     }
 }
