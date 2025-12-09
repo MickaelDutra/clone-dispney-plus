@@ -2,6 +2,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
+const ugligy = require('gulp-uglify');
 
 
 function buildStyles() {
@@ -18,8 +19,15 @@ function buildImage() {
         .pipe(gulp.dest('dist/images'));
 }
 
-exports.default = gulp.parallel(buildStyles, buildImage);
+function buildScripts() {
+    return gulp.src('src/script/*.js')
+        .pipe(ugligy())
+        .pipe(gulp.dest('dist/js'));
+}
+
+exports.default = gulp.parallel(buildStyles, buildImage, buildScripts);
 
 exports.watch = function () {
     gulp.watch('src/style/*.scss', gulp.parallel(buildStyles))
+    gulp.watch('src/script/*.js', gulp.parallel(buildScripts))
 };
